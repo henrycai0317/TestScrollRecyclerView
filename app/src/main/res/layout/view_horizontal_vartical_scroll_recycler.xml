@@ -62,23 +62,21 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:gravity="center"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="28dp"
                 android:gravity="center"
                 android:hint="2023/08/23"
                 android:text="除息日"
-                android:visibility="invisible" />
+                android:visibility="visible" />
 
             <TextView
                 android:layout_width="85dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:gravity="center"
+                android:gravity="center|right"
                 android:maxLines="1"
                 android:text="現金股利(USD)" />
 
@@ -88,7 +86,7 @@
                 android:layout_marginLeft="8dp"
                 android:gravity="center"
                 android:maxLines="1"
-                android:text="  近一年殖利率" />
+                android:text="近一年殖利率" />
 
             <TextView
                 android:layout_width="80dp"
@@ -119,8 +117,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:background="@color/white"
-            android:gravity="center">
+            android:background="@color/white">
 
             <TextView
                 android:layout_width="80dp"
