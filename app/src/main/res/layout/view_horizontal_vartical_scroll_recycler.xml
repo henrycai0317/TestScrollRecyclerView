@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--      Content Layout      -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/moveRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/vHorizontalShadow"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/view_item_horizontal_vertical_scroll_item" />
+
+        <!-- Header 水平shadow -->
+        <View
+            android:id="@+id/vHorizontalShadow"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@+id/llHeaderLeftLayout"
+            android:background="@drawable/bg_shadow_line" />
+
+        <!--   Header 垂直shadow     -->
+        <LinearLayout
+            android:id="@+id/rlShadowHeaderVertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/headerLeftGap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:hint="2023/08/23"
+                    android:text="除息日"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:layout_alignRight="@+id/headerLeftGap"
+                android:background="@drawable/bg_shadow_horizontal" />
+
+        </LinearLayout>
+
+        <!--    Header 右邊 title with data layout    -->
+        <LinearLayout
+            android:id="@+id/llHeaderMoveRight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:gravity="center"
+                android:hint="2023/08/23"
+                android:text="除息日"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="現金股利(USD)" />
+
+            <TextView
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="  近一年殖利率" />
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center|right"
+                android:hint="2023/10/23"
+                android:maxLines="1"
+                android:text="宣告日" />
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|right"
+                android:layout_marginLeft="8dp"
+                android:hint="2023/10/23"
+                android:maxLines="1"
+                android:text="     發放日" />
+        </LinearLayout>
+
+        <!-- Header 左邊Title Layout -->
+
+
+        <LinearLayout
+            android:id="@+id/llHeaderLeftLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:hint="2023/08/23"
+                android:text="除息日" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</layout>

@@ -93,13 +93,13 @@ public class HRecyclerView extends RelativeLayout {
      * @return
      */
     private View createHeadLayout() {
-        LinearLayout headLayout = new LinearLayout(getContext());
+        LinearLayout headLayout = new LinearLayout(getContext()); // big frame
         headLayout.setGravity(Gravity.CENTER);
         headLayout.setBackgroundColor(Color.parseColor("#ffffff"));
         headLayout.setElevation(0);
 
         //左上角Header Title View
-        LinearLayout leftLayout = new LinearLayout(getContext());
+        LinearLayout leftLayout = new LinearLayout(getContext()); // inside
         addListHeaderTextView(mLeftTextList[0], mLeftTextWidthList[0], leftLayout);
         leftLayout.setGravity(Gravity.CENTER);
         leftLayout.setBackgroundColor(Color.parseColor("#ffffff"));

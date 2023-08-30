@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--    Header 右邊 title with data layout    -->
+        <LinearLayout
+            android:id="@+id/llHeaderMoveRight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:gravity="center|left"
+                android:hint="2023/08/23"
+                android:text="2023/08/23"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/mUSD"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center|right"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="0.00129" />
+
+            <TextView
+                android:id="@+id/mPercent"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center|right"
+                android:hint="  近一年殖利率"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="6.38%" />
+
+            <TextView
+                android:id="@+id/mAnnounce"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center|right"
+                android:hint="2023/10/23"
+                android:maxLines="1"
+                android:text="2023/10/23" />
+
+            <TextView
+                android:id="@+id/mDelivery"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|right"
+                android:layout_marginLeft="8dp"
+                android:hint="2023/10/23"
+                android:maxLines="1"
+                android:text="2023/10/23" />
+        </LinearLayout>
+
+        <!-- Header 左邊Title Layout -->
+
+
+        <LinearLayout
+            android:id="@+id/llHeaderLeftLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/mDateA"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:hint="2023/08/23"
+                android:text="2023/08/23" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</layout>
