@@ -1,6 +1,7 @@
 package com.example.testscrollrecyclerview.testRecyclerView
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.content.Context
 import android.graphics.Rect
 import android.util.AttributeSet
@@ -91,9 +92,16 @@ class HVRecyclerView(context: Context?, attrs: AttributeSet?) : RelativeLayout(c
                         } else {
 
                             //當滑動大於最大寬度時，不在滑動(右邊到頭了)
+
                             if (rightLayoutTotalWidth() + mMoveOffsetX >= llFrameRightTitleLayout.width) {
                                 mMoveOffsetX = llFrameRightTitleLayout.width - rightLayoutTotalWidth()
                             }
+
+//                            val iTotal = resources.displayMetrics.density * 458
+//
+//                            if (Uitils.getDeviceWidth(context as Activity)+ mMoveOffsetX >= iTotal) {
+//                                mMoveOffsetX = iTotal.toInt() - Uitils.getDeviceWidth(context as Activity)
+//                            }
 
                         }
                         //跟随手指向右滚动
@@ -142,6 +150,8 @@ class HVRecyclerView(context: Context?, attrs: AttributeSet?) : RelativeLayout(c
     }
 
     private fun rightLayoutTotalWidth(): Int {
+
+        // mViewBinding.llFrameRightTitleLayout.width 這個寬 跟螢幕依樣
 
         return mViewBinding.llFrameRightTitleLayout.width - mViewBinding.llFrameLeftTitle.width
     }
