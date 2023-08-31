@@ -13,6 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/vHorizontalShadow"
+            android:layout_marginTop="2dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/view_item_horizontal_vertical_scroll_item" />
 
@@ -21,15 +22,16 @@
             android:id="@+id/vHorizontalShadow"
             android:layout_width="match_parent"
             android:layout_height="5dp"
-            android:layout_below="@+id/llHeaderLeftLayout"
+            android:layout_below="@+id/vHeaderLine"
             android:background="@drawable/bg_shadow_line"
-            android:visibility="invisible"/>
+            android:visibility="invisible" />
 
         <!--   Header 垂直shadow     -->
         <LinearLayout
             android:id="@+id/rlShadowHeaderVertical"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/moveRecyclerView"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -57,76 +59,107 @@
 
         <!--    Header 右邊 title with data layout    -->
         <LinearLayout
-            android:id="@+id/llHeaderMoveRight"
+            android:id="@+id/llFrameMultipleTopTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="12dp">
 
-            <TextView
-                android:layout_width="80dp"
+            <LinearLayout
+                android:id="@+id/llFrameMultipleTopTitleData"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:hint="2023/08/23"
-                android:text="除息日"
-                android:visibility="visible" />
+                android:background="@android:color/transparent"
+                android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="85dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:gravity="center|right"
-                android:maxLines="1"
-                android:text="現金股利(USD)" />
 
-            <TextView
-                android:layout_width="85dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:gravity="center"
-                android:maxLines="1"
-                android:text="近一年殖利率" />
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:hint="2023/01/02"
+                    android:text="Ac"
+                    android:textColor="#666666"
+                    android:textSize="12dp"
+                    android:visibility="invisible" />
 
-            <TextView
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:gravity="center|right"
-                android:hint="2023/10/23"
-                android:maxLines="1"
-                android:text="宣告日" />
+                <TextView
+                    android:id="@+id/tvTitleB"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="right"
+                    android:hint="現金股利(USD)"
+                    android:text="B"
+                    android:textColor="#666666"
+                    android:textSize="12dp" />
 
-            <TextView
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|right"
-                android:layout_marginLeft="8dp"
-                android:hint="2023/10/23"
-                android:maxLines="1"
-                android:text="     發放日" />
+                <TextView
+                    android:id="@+id/tvTitleC"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="right"
+                    android:hint="近一年殖利率"
+                    android:text="C"
+                    android:textColor="#666666"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tvTitleD"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="right"
+                    android:hint="2023/10/23"
+                    android:text="D"
+                    android:textColor="#666666"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tvTitleE"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="right"
+                    android:hint="2023/10/23"
+                    android:text="E"
+                    android:textColor="#666666"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
         </LinearLayout>
 
         <!-- Header 左邊Title Layout -->
 
 
         <LinearLayout
-            android:id="@+id/llHeaderLeftLayout"
+            android:id="@+id/llHeadLeftFrame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@color/white">
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingTop="12dp">
 
             <TextView
+                android:id="@+id/tvTitleA"
                 android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:gravity="center|left"
-                android:hint="2023/08/23"
-                android:text="除息日" />
+                android:layout_height="match_parent"
+                android:hint="2023/01/02"
+                android:text="A"
+                android:textColor="#666666"
+                android:textSize="12dp" />
         </LinearLayout>
+
+
+        <View
+            android:id="@+id/vHeaderLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/llFrameMultipleTopTitle"
+            android:layout_marginTop="12dp"
+            android:background="#e5e5e5" />
 
 
     </RelativeLayout>

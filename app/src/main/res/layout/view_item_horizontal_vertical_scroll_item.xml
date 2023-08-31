@@ -10,12 +10,12 @@
 
         <!-- Header 左邊Title Layout -->
         <LinearLayout
-            android:id="@+id/llHeaderLeftLayout"
+            android:id="@+id/llHeadLeftFrame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
             android:background="@color/white">
 
             <TextView
@@ -23,16 +23,18 @@
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:gravity="center|left"
-                android:text="2023/08/23" />
+                android:text="2023/08/23"
+                android:textColor="#333333"
+                android:textSize="14dp" />
         </LinearLayout>
 
         <!--    Header 右邊 title with data layout    -->
         <LinearLayout
-            android:id="@+id/llHeaderMoveRight"
+            android:id="@+id/llFrameMultipleTopTitleData"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
             android:orientation="horizontal">
 
             <TextView
@@ -40,16 +42,20 @@
                 android:layout_width="85dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:gravity="center|right"
-                android:text="0.00129" />
+                android:gravity="right"
+                android:text="0.00129"
+                android:textColor="#333333"
+                android:textSize="14dp" />
 
             <TextView
                 android:id="@+id/mPercent"
                 android:layout_width="85dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:gravity="center|right"
-                android:text="6.38%" />
+                android:gravity="right"
+                android:text="6.38%"
+                android:textColor="#333333"
+                android:textSize="14dp" />
 
             <TextView
                 android:id="@+id/mAnnounce"
@@ -57,7 +63,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:gravity="center|right"
-                android:text="2023/10/23" />
+                android:text="2023/10/23"
+                android:textColor="#333333"
+                android:textSize="14dp" />
 
             <TextView
                 android:id="@+id/mDelivery"
@@ -65,7 +73,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|right"
                 android:layout_marginLeft="8dp"
-                android:text="2023/10/23" />
+                android:text="2023/10/23"
+                android:textColor="#333333"
+                android:textSize="14dp" />
         </LinearLayout>
 
         <!-- Header 水平shadow -->
