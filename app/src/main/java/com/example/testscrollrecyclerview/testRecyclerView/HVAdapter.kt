@@ -1,6 +1,5 @@
 package com.example.testscrollrecyclerview.testRecyclerView
 
-import android.icu.text.UFormat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +9,7 @@ import com.example.testscrollrecyclerview.BaseViewHolder
 import com.example.testscrollrecyclerview.R
 import com.example.testscrollrecyclerview.databinding.ViewItemHorizontalVerticalScrollItemBinding
 
-class HVAdapter(val mDatas: ArrayList<HRVInfoData>) :
+class HVAdapter(private val mData: ArrayList<HRVInfoData>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private var mFixXAxis = 0
@@ -24,10 +23,10 @@ class HVAdapter(val mDatas: ArrayList<HRVInfoData>) :
         )
     }
 
-    override fun getItemCount(): Int = mDatas.size
+    override fun getItemCount(): Int = mData.size
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        val iInfoData = mDatas[position]
+        val iInfoData = mData[position]
         (holder as ItemRCViewHolder).mItemView.apply {
             vHeaderLine.visibility = View.VISIBLE
             if (position == 0) {

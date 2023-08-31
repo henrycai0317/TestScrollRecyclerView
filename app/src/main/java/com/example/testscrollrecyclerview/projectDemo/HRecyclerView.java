@@ -30,6 +30,8 @@ public class HRecyclerView extends RelativeLayout {
     private LinearLayout mShadowVertical;
     //头部title布局
     private LinearLayout mRightTitleLayout;
+    private ArrayList<View> mMoveViewList = new ArrayList();
+    private ArrayList<View> mHeadViewList = new ArrayList();
 
     private LinearLayout mLeftTitleLayout;
     //手指按下时的位置
@@ -38,6 +40,17 @@ public class HRecyclerView extends RelativeLayout {
     private int mMoveOffsetX = 0;
     //最大可滑动差值
     private int mFixX = 0;
+
+    //展示数据时使用的RecycleView
+    private RecyclerView mRecyclerView;
+
+    //RecycleView的Adapter
+    private Object mAdapter;
+
+    //触发拦截手势的最小值
+    private int mTriggerMoveDis=30;
+
+    ///--------------------------------
     //左边标题集合
     private String[] mLeftTextList;
     //左边标题的宽度集合
@@ -46,13 +59,10 @@ public class HRecyclerView extends RelativeLayout {
     private String[] mRightTitleList = new String[]{};
     //右边标题的宽度集合
     private int[] mRightTitleWidthList = null;
-    //展示数据时使用的RecycleView
-    private RecyclerView mRecyclerView;
-    //RecycleView的Adapter
-    private Object mAdapter;
+
+
     //需要滑动的View集合
-    private ArrayList<View> mMoveViewList = new ArrayList();
-    private ArrayList<View> mHeadViewList = new ArrayList();
+
     private Context context;
     //右边可滑动的总宽度
     private int mRightTotalWidth = 0;
@@ -62,8 +72,7 @@ public class HRecyclerView extends RelativeLayout {
     private int mLeftViewWidth = 80;
     //左边view的高度
     private int mLeftViewHeight=50;
-    //触发拦截手势的最小值
-    private int mTriggerMoveDis=30;
+
 
     public HRecyclerView(Context context) {
         this(context, null);
