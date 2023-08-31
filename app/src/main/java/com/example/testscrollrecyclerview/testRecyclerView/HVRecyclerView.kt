@@ -108,7 +108,8 @@ class HVRecyclerView(context: Context?, attrs: AttributeSet?) : RelativeLayout(c
 //                }
             }
             MotionEvent.ACTION_UP -> {
-                mMoveOffsetX
+                mMaxFixX = mMoveOffsetX  //設置水平最大平移的寬度
+                //每次左、右滑動都要更新Adapter中的mFix數值，讓它移動到目前滑道的距離
             }
         }
         return super.onTouchEvent(event)

@@ -1,5 +1,6 @@
 package com.example.testscrollrecyclerview.testRecyclerView
 
+import android.icu.text.UFormat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,6 +29,10 @@ class HVAdapter(val mDatas: ArrayList<HRVInfoData>) :
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val iInfoData = mDatas[position]
         (holder as ItemRCViewHolder).mItemView.apply {
+            vHeaderLine.visibility = View.VISIBLE
+            if (position == 0) {
+                vHeaderLine.visibility = View.INVISIBLE
+            }
             mDateA.text = iInfoData.dateA
             mUSD.text = iInfoData.priceA
             mPercent.text = iInfoData.percentA
@@ -35,8 +40,8 @@ class HVAdapter(val mDatas: ArrayList<HRVInfoData>) :
             mDelivery.text = iInfoData.deliver
 
             //水平滑動處裡
-            llHeaderMoveRight.scrollTo(mFixXAxis,0)
-            mMoveViewList.add(llHeaderMoveRight)
+            llFrameMultipleTopTitleData.scrollTo(mFixXAxis,0)
+            mMoveViewList.add(llFrameMultipleTopTitleData)
         }
     }
 
