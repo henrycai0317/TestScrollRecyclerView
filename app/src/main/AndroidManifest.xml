@@ -22,7 +22,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".projectDemo.CoinActivity"/>
+        <activity android:name=".projectDemo.CoinActivity" />
+        <activity android:name=".testRecyclerView.ActivityRecyclerMoveHAndV" />
     </application>
 
 </manifest>

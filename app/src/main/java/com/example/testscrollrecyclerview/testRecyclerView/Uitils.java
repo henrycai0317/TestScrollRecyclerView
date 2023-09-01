@@ -6,9 +6,9 @@ import android.util.DisplayMetrics;
 import android.view.Display;
 
 public class Uitils {
-
-    public static int getDeviceWidth(Activity pActivity) {
-        if( pActivity != null) {
+    static int mDeviceWidth = -1;
+    public static void getDeviceWidth(Activity pActivity) {
+        if( pActivity != null && mDeviceWidth == -1) {
             DisplayMetrics outMetrics = new DisplayMetrics();
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
                 Display iDisplay = pActivity.getDisplay();
@@ -17,10 +17,7 @@ public class Uitils {
                 Display iDisplay = pActivity.getWindowManager().getDefaultDisplay();
                 iDisplay.getMetrics(outMetrics);
             }
-
-            return outMetrics.widthPixels;
-        } else {
-            return 0;
+            mDeviceWidth = outMetrics.widthPixels;
         }
     }
 }

@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.testscrollrecyclerview.databinding.ActivityMainBinding
 import com.example.testscrollrecyclerview.projectDemo.CoinActivity
+import com.example.testscrollrecyclerview.testRecyclerView.ActivityRecyclerMoveHAndV
 import com.example.testscrollrecyclerview.testRecyclerView.HRVInfoData
 import com.example.testscrollrecyclerview.testRecyclerView.HVAdapter
+import com.example.testscrollrecyclerview.testRecyclerView.Uitils
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,10 +23,10 @@ class MainActivity : AppCompatActivity() {
         mBinding = ActivityMainBinding.inflate(layoutInflater)
         val view = mBinding.root
         setContentView(view)
-
-//        startActivity(Intent(this@MainActivity, CoinActivity::class.java))
-        initView()
-        initRecyclerView()
+        Uitils.getDeviceWidth(this)
+        startActivity(Intent(this@MainActivity, ActivityRecyclerMoveHAndV::class.java))
+//        initView()
+//        initRecyclerView()
 //        listener()
     }
 
