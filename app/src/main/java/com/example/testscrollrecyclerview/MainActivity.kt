@@ -11,6 +11,10 @@ import com.example.testscrollrecyclerview.testRecyclerView.HVAdapter
 import com.example.testscrollrecyclerview.testRecyclerView.Uitils
 
 class MainActivity : AppCompatActivity() {
+    /**
+     * 參考資料 : https://github.com/androidxiao/ProjectDemo/tree/master/app/src/main/java/cn/example/stockmarket/widget
+     *
+     * */
 
     private lateinit var mBinding: ActivityMainBinding
     private val mTestHRVData = arrayListOf<HRVInfoData>()
